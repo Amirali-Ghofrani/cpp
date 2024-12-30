@@ -45,6 +45,6 @@ int main()
    std::cout<< sizeof(double)<<std::endl;
    std::cout<< sizeof(char)<<std::endl;
 
-//End of variables sessio! :-D
+//End of variables session! :-D
 
 }

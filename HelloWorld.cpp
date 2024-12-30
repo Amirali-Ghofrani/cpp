@@ -7,6 +7,6 @@ int main()  // we dont need to return an integer for main function and
 {
 	std::cout << "Hello, world!"<< std::endl;
 	std::cin.get(); // the programm waits for us untill we press Enter
-  //  Log("Hello World Again!");
+  
 }
 
