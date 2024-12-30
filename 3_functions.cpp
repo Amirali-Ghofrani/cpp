@@ -18,7 +18,6 @@ multiplyAndLog(4,6);
 multiplyAndLog(7,2);
 multiplyAndLog(8,3);
 
-std::cin.get();
-
+return 0;
 }
 
