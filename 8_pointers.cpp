@@ -24,7 +24,7 @@ int main()
                               //memset gets the memory starting addr.(buffer),
                              // value to be filled(0), and number of bytes to be filled
     
-    char** ptr = &buffer;   //double pointers:ptr is a pointer which stors 
+    char** ptr_3 = &buffer;   //double pointers:ptr_3 is a pointer which stors 
                             //the memory address of buffer(another pointer)
     delete[] buffer;        // deletes buffer
 
