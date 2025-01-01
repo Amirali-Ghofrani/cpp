@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 // a pointer is an integer which holds a memory address
 
 int main()
@@ -16,4 +17,15 @@ int main()
                     // for writting, pointer type should be determined
                     // we can't write in a void pointer!
     std::cout<<var_2; 
-}
+
+    char* buffer = new char[8]; //new char allocates an area of memory to a
+    memset(buffer, 0, 8);       //an array of chars with length of 8 bytes
+                               //it stores the starting address in buffer
+                              //memset gets the memory starting addr.(buffer),
+                             // value to be filled(0), and number of bytes to be filled
+    
+    char** ptr = &buffer;   //double pointers:ptr is a pointer which stors 
+                            //the memory address of buffer(another pointer)
+    delete[] buffer;        // deletes buffer
+
+} 
