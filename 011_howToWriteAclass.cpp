@@ -46,6 +46,6 @@ int main()
     log.SetLevel(log.LogLevelWarning);
     log.Error("Hi");
     log.Warn("Hello!");
-    log.Info("Hey");
+    log.Info("Hi");
 
 }
