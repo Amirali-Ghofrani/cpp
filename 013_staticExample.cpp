@@ -14,10 +14,6 @@ int Entity::x;
 int Entity::y; //we have to define them outside of the struct(or class) 
                //to make them visible
 
-
-
-
-
 int main()
 {               
     Entity e;
@@ -38,7 +34,6 @@ int main()
 
 // so, it makes more sense to rewrite our code like below:
 
-
 void corrected()
 {               
     Entity e;
@@ -51,5 +46,13 @@ void corrected()
 
     e.Print();
     e1.Print();
-
 }
+
+// also we can define void Print() as static void Print() and call it as 
+//Entity::Print().
+//HOWEVER,
+//static functions can not work with non-static variables, because they
+//don't know x,y in which Entity class(e,e1,...) should be modified
+
+//generally, static is used to manipulate data that does not change
+//between class instances, but we need to use in our classes.
