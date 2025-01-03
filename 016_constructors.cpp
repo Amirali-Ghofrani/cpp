@@ -30,4 +30,4 @@ int main()
 }
 
 //IMPORTANT: constructors would only run when we instantiate a class type object(e).
-//Entity = delete;  //with this command the default constructor is deleted 
+//Entity = delete;  //with this command the default constructor is deleted.
