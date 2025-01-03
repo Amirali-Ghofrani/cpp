@@ -19,3 +19,6 @@
 016_constructors
 017_destructors
 018_inheritance
+019_virtualFunctions
+020_interfaces
+021_visibility
