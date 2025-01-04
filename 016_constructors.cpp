@@ -5,10 +5,10 @@ class Entity
 public:
     float X, Y;
 
-    Entity() //runs every time an Entity type object is created. Initializes X and Y.
-    {       //doesn't return anything. must match the name of the class
+    Entity()         //runs every time an Entity type object is created. Initializes X and Y.
+    {               //doesn't return anything. must match the name of the class
         X = 0.0f;  //if we don't define any constructor, the compiler will use 
-        Y = 0.0f;  //a default constructor which simply does nothing.
+        Y = 0.0f; //a default constructor which simply does nothing.
     }
 
     Entity(float x, float y) //we can use as many constructors as we want
