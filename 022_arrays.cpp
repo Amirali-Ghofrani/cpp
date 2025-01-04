@@ -1,8 +1,11 @@
 #include <iostream>
+#include <array>
 
 int main()
 {
+    const int exampleSize = 5; //storing size of the array in an int var
     int example[5];
+    
     example[0] = 2; //this is just an integer and we can treat it like one
     std::cout << example[0] << std::endl; 
     
@@ -14,9 +17,9 @@ int main()
 
     example[-1] = 6; //memory access violation! it wont cause errors but maybe
     example[5] = 7; //changes the memory for another variable in our sourcecode
-
-    for(int i = 0; i < 5; i++) //initializing all ints in example with a for loop
-    {
+ 
+    for(int i = 0; i < exampleSize; i++) //initializing all ints in example with a for loop
+    {                                   //using exampleSize var (=5) instead of raw number
         example[i] = 2;
     }
 
@@ -30,11 +33,18 @@ int main()
                                 //the memory address 
 
 int* another = new int[5]; //also creats an array of 5, but dynamically on the heap, and it means its
-delete another[];         //lifetime ends only when we delete it or our programm is finished
+delete[] another;         //lifetime ends only when we delete it or our programm is finished
                          // in contrast to "int example[5];" which creats the array on the stack
                         //and will be deleted afted at the end of the main func
 
+// arraysize must be kept be the programmer in an integer, and there is no trustworthy method to get the size of an arrsy
+//but this method works only for stack allocated arrays(and still not recommended):
 
+int b [5];
+int count = sizeof(b) / sizeof(int);
 
+//with #include<array> we can use C++ standard arrays:
+std::array<int, 5> myArray;
+std::cout << myArray.size() << std::endl;
 
 } 
