@@ -37,8 +37,8 @@ delete[] another;         //lifetime ends only when we delete it or our programm
                          // in contrast to "int example[5];" which creats the array on the stack
                         //and will be deleted afted at the end of the main func
 
-// arraysize must be kept be the programmer in an integer, and there is no trustworthy method to get the size of an arrsy
-//but this method works only for stack allocated arrays(and still not recommended):
+// arraysize must be kept be the programmer in an integer, and there is no trustworthy method to get the size of an arrasy
+//but this method works only for stack allocated arrays(and still not recommended, can mitakenly be applied to a pointer!):
 
 int b [5];
 int count = sizeof(b) / sizeof(int);
