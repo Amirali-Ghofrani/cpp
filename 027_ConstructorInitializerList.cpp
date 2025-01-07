@@ -2,9 +2,6 @@
 #include <iostream>
 #include <string>
 
-#include <string>
-#include <iostream>
-
 class Entity
 {
 private:
