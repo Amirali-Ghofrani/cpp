@@ -1,22 +1,65 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 struct Vector2
 {
     float x, y;
 };
 
+class String
+{
+
+private:
+    char* m_Buffer;
+    unsigned int m_Size;
+public:
+    String(const char* string)
+    {
+        m_Size = strlen(string);
+        m_Buffer = new char[m_Size + 1];
+        for(int i = 0; i < m_Size; i++) //we can also use memcpy(m_Buffer, string, m_Size)
+        {
+            m_Buffer[i] = string[i];  
+        }
+    }
+
+    String(const String& other)
+        : m_Size(other.m_Size)
+    {
+        m_Buffer = new char[m_Size + 1];
+        memcpy(m_Buffer, other.m_Buffer, m_Size + 1);
+    }
+
+    ~String()
+    {
+        delete[] m_Buffer;
+    }
+
+    char& operator[](unsigned int index)
+    {
+        return m_Buffer[index];
+    }
+
+    friend std::ostream& operator<<(std::ostream& stream, const String& string);
+
+};
+
+
+
+std::ostream& operator<<(std::ostream& stream, const String& string)
+{
+    stream << string.m_Buffer;
+    return stream;
+}
+
 int main()
 {
-    int a = 2;
-    int b = a; //we are creating a copy of var a with a different memo address
-                // so when a or b is changed, the other var will remain the same
-    Vector2 c = {2, 3};
-    Vector2 d = c;
-    d.x = 5;  //d is a copy of c in a different memo address so when we change d, c remains the same
 
-    Vector2* e = new Vector2();
-    Vector2* f = e; // in this case pointer e and f are pointing to the same memo address
-    f -> x = 2;
-    f -> y = 5; //this operation affects both e and f
+    String string = "Cherno";
+    String second = string;
+
+    second[2] = 'a';
+
+    std::cout << string << std::endl;
+    std::cout << second << std::endl;
 }
