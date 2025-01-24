@@ -1,5 +1,5 @@
-// *** NOTE *** : This code is copied with permission from "https://www.learncpp.com/cpp-tutorial/what-language-standard-is-my-compiler-using/"
-// It returns the current language standard used by compiler  
+// *** NOTE *** : The following code is copied with permission from "https://www.learncpp.com/cpp-tutorial/what-language-standard-is-my-compiler-using/"
+// It returns the current language standard used by the compiler  
 
 
 // This program prints the C++ language standard your compiler is currently using
