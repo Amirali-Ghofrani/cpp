@@ -14,6 +14,12 @@ a selected scope by "Ctrl" + "/"
 int main()
 {
     std::cout << "Hi there!,\nthis is the first lesson of learncpp.com tutprials";
+    int a, b; // correct but NOT recommended
+    int c; double d; // correct but NOT recommended
+                    // different variable types should be
+                   // defined in different statements
+    int width = 5; // a copy assignment, copies the number 5
+                  // to the variable width
 }
 
 // USEFUL TIP!
