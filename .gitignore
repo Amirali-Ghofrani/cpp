@@ -38,6 +38,9 @@
 035_copying
 
 000_languageStandard
-0012_cppBasics
-0013_variableInitialization
-0014_iostream
+00102_cppBasics
+00103_variableInitialization
+00104_iostream
+00214_chapter2Quiz_main
+00214_chapter2Quiz_io
+

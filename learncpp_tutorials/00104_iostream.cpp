@@ -5,7 +5,7 @@
 //the main function to compare them with one another! 
 
 #include <iostream>
-#include <unistd.h>  //required library for sleep command
+#include <unistd.h>  //required library for sleep command in a unix based OS
 
 void bufferFlush_1()
 {
